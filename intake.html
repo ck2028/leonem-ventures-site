@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Leonem Ventures founding client intake form for contractors, developers, rehabbers, and real-estate operators.">
+  <title>Founding Client Intake | Leonem Ventures</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">LEONEM VENTURES</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#addons">Add-ons</a>
+        <a class="button small" href="intake.html" aria-current="page">Client Intake</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intake-hero">
+      <div class="wrap intake-intro">
+        <div>
+          <p class="eyebrow">Founding Client Intake</p>
+          <h1>Tell us where your project finances need more control.</h1>
+          <p class="lead">This short intake helps Leonem understand your business, active projects, current financial workflow, and where clearer reporting or finance administration may help.</p>
+        </div>
+        <aside class="intake-side-note">
+          <strong>What happens next</strong>
+          <ol>
+            <li>Complete the intake.</li>
+            <li>Review your indicative package fit.</li>
+            <li>Leonem confirms scope before any engagement begins.</li>
+          </ol>
+          <p class="fine">Package fit is preliminary and does not constitute a quote, engagement, accounting opinion, legal advice, tax advice, or other professional advice.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="intake-section">
+      <div class="wrap intake-layout">
+        <form id="intakeForm" class="intake-form" novalidate>
+          <div class="form-section">
+            <div class="form-section-head">
+              <span>01</span>
+              <div><h2>Business information</h2><p>Basic information about the company and person we would speak with.</p></div>
+            </div>
+            <div class="form-grid">
+              <label>Full name *<input name="name" autocomplete="name" required></label>
+              <label>Company name *<input name="company" autocomplete="organization" required></label>
+              <label>Email *<input name="email" type="email" autocomplete="email" required></label>
+              <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+              <label>Business type *
+                <select name="businessType" required>
+                  <option value="">Select one</option>
+                  <option>General contractor</option>
+                  <option>Remodeler / custom builder</option>
+                  <option>Rehabber / flipper</option>
+                  <option>Developer</option>
+                  <option>Real-estate investor</option>
+                  <option>Property operator</option>
+                  <option>Specialty contractor</option>
+                  <option>Other project-based business</option>
+                </select>
+              </label>
+              <label>Primary market / location<input name="location" placeholder="City, state or region"></label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-head">
+              <span>02</span>
+              <div><h2>Operating complexity</h2><p>These fields help us estimate the amount of financial-control work involved.</p></div>
+            </div>
+            <div class="form-grid">
+              <label>Active projects *
+                <select name="projects" id="projects" required>
+                  <option value="">Select one</option>
+                  <option value="1-2">1–2</option>
+                  <option value="3-5">3–5</option>
+                  <option value="6-10">6–10</option>
+                  <option value="10+">More than 10</option>
+                </select>
+              </label>
+              <label>Business entities
+                <select name="entities">
+                  <option>1</option><option>2</option><option>3</option><option>4+</option>
+                </select>
+              </label>
+              <label>Approximate monthly transaction volume
+                <select name="transactions">
+                  <option value="">Not sure</option>
+                  <option>Under 100</option><option>100–250</option><option>251–500</option><option>501–1,000</option><option>1,000+</option>
+                </select>
+              </label>
+              <label>Current accounting / bookkeeping system
+                <select name="accountingSystem">
+                  <option value="">Select / not sure</option>
+                  <option>QuickBooks Online</option><option>QuickBooks Desktop</option><option>Xero</option><option>Buildertrend</option><option>Procore</option><option>Spreadsheets</option><option>Other</option><option>No formal system</option>
+                </select>
+              </label>
+              <label>Current finance support
+                <select name="financeSupport">
+                  <option value="">Select one</option>
+                  <option>Owner handles most finance work</option>
+                  <option>Internal bookkeeper</option>
+                  <option>Outside bookkeeper</option>
+                  <option>CPA / accounting firm</option>
+                  <option>Controller / finance manager</option>
+                  <option>Combination of providers</option>
+                  <option>None</option>
+                </select>
+              </label>
+              <label>How quickly are you looking for help?
+                <select name="timing">
+                  <option>Immediately / within 2 weeks</option><option>Within 30 days</option><option>Within 60–90 days</option><option>Just exploring</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-head">
+              <span>03</span>
+              <div><h2>What needs attention?</h2><p>Select the areas where you want better visibility, control, or administrative support.</p></div>
+            </div>
+            <div class="check-grid">
+              <label><input type="checkbox" name="needs" value="Project budgets / budget vs. actual">Project budgets / budget vs. actual</label>
+              <label><input type="checkbox" name="needs" value="Job costing / project profitability">Job costing / project profitability</label>
+              <label><input type="checkbox" name="needs" value="Committed costs">Committed costs</label>
+              <label><input type="checkbox" name="needs" value="Change-order financial tracking">Change-order financial tracking</label>
+              <label><input type="checkbox" name="needs" value="Accounts receivable visibility">Accounts receivable visibility</label>
+              <label><input type="checkbox" name="needs" value="Accounts payable visibility">Accounts payable visibility</label>
+              <label><input type="checkbox" name="needs" value="Cash forecasting">30–60 day cash forecasting</label>
+              <label><input type="checkbox" name="needs" value="Managed bookkeeping">Managed bookkeeping</label>
+              <label><input type="checkbox" name="needs" value="Financial cleanup / catch-up">Financial cleanup / catch-up</label>
+              <label><input type="checkbox" name="needs" value="CPA / lender reporting organization">CPA / lender reporting organization</label>
+              <label><input type="checkbox" name="needs" value="Owner management dashboard">Owner management dashboard</label>
+              <label><input type="checkbox" name="needs" value="Not sure — need diagnosis">Not sure — need diagnosis</label>
+            </div>
+            <label class="block-label">What is the biggest finance or project-control problem you want solved? *
+              <textarea name="problem" rows="6" required placeholder="Example: We have five active jobs, but I cannot reliably see committed costs, which jobs are drifting over budget, or what cash we will need over the next month."></textarea>
+            </label>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-head">
+              <span>04</span>
+              <div><h2>Service interest</h2><p>You do not need to know the right package. This simply tells us what caught your attention.</p></div>
+            </div>
+            <div class="check-grid compact">
+              <label><input type="checkbox" name="interest" value="Project Control Core">Project Control Core</label>
+              <label><input type="checkbox" name="interest" value="Project Control Growth">Project Control Growth</label>
+              <label><input type="checkbox" name="interest" value="Project Control Portfolio">Project Control Portfolio</label>
+              <label><input type="checkbox" name="interest" value="Managed Bookkeeping">Managed Bookkeeping</label>
+              <label><input type="checkbox" name="interest" value="A/R Control">A/R Control</label>
+              <label><input type="checkbox" name="interest" value="A/P Control">A/P Control</label>
+              <label><input type="checkbox" name="interest" value="Job-Costing Setup">Job-Costing Setup</label>
+              <label><input type="checkbox" name="interest" value="Diagnostic / Cleanup / Modeling">Diagnostic / Cleanup / Modeling</label>
+            </div>
+          </div>
+
+          <div class="form-section agreement-section">
+            <label class="agreement"><input type="checkbox" name="boundaryAcknowledgement" required><span>I understand that Leonem Ventures is not a CPA firm, law firm, investment adviser, or tax practice, and that submitting this intake does not create a professional or client relationship. *</span></label>
+            <label class="agreement"><input type="checkbox" name="accuracy" required><span>I confirm that the information above is accurate to the best of my knowledge and may be used to evaluate whether Leonem is a fit. *</span></label>
+          </div>
+
+          <div class="form-actions">
+            <button class="button form-submit" type="submit">Prepare My Intake</button>
+            <p class="fine">This version does not transmit information to a third party. No submission is stored by Leonem until a secure intake destination is connected.</p>
+          </div>
+        </form>
+
+        <aside class="intake-summary-card" aria-live="polite">
+          <p class="overline dark-text">Indicative package fit</p>
+          <h2 id="fitName">Complete the form</h2>
+          <p id="fitDescription">Your active-project count will provide an initial package reference. Final scope depends on transaction volume, entities, data quality, reporting cadence, and complexity.</p>
+          <div id="fitPrice" class="fit-price">—</div>
+          <hr>
+          <h3>Before a call</h3>
+          <p class="fine">Helpful items may include a current project list, accounting-system name, sample project budget, A/R or A/P aging, and the reporting you currently use. Do not upload bank passwords, tax credentials, or other sensitive login information.</p>
+          <div id="intakeResult" class="intake-result" hidden>
+            <h3>Intake prepared</h3>
+            <p>Your answers have been formatted into a review summary. They have <strong>not</strong> been transmitted or stored by Leonem yet.</p>
+            <textarea id="intakeSummary" rows="12" readonly></textarea>
+            <button type="button" class="button ghost full" id="copySummary">Copy Intake Summary</button>
+            <p id="copyStatus" class="fine" aria-live="polite"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid"><div><strong>LEONEM VENTURES</strong><br>Project Financial Control & Finance Operations</div><div>Copyright © 2026 Leonem Ventures. All rights reserved.</div></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
