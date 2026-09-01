@@ -1,4 +1,33 @@
-document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',event=>{const href=link.getAttribute('href');if(href==="#contact"){event.preventDefault();window.location.href='intake.html';return;}const target=document.querySelector(href);if(target){event.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}});});
+const tallyUrl='https://tally.so/r/2E6lNp';
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+  link.addEventListener('click',event=>{
+    const href=link.getAttribute('href');
+    if(href==="#contact"){
+      event.preventDefault();
+      window.location.href=tallyUrl;
+      return;
+    }
+    const target=document.querySelector(href);
+    if(target){
+      event.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+});
+
+const contactCard=document.querySelector('.contact-card');
+if(contactCard){
+  const heading=contactCard.querySelector('h3');
+  const paragraph=contactCard.querySelector('p');
+  const button=contactCard.querySelector('.button');
+  if(heading) heading.textContent='Founding-client intake';
+  if(paragraph) paragraph.textContent='Complete the secure Leonem intake to share your business profile, active-project workload, current finance setup, and the financial-control problem you want to solve.';
+  if(button){
+    button.textContent='Start Secure Intake';
+    button.href=tallyUrl;
+  }
+}
 
 const intakeForm=document.getElementById('intakeForm');
 if(intakeForm){
@@ -35,31 +64,12 @@ if(intakeForm){
     const interest=valuesFor('interest');
     const fit=fitMap[projects.value];
     const lines=[
-      'LEONEM VENTURES — FOUNDING CLIENT INTAKE',
-      '',
-      `Name: ${val('name')}`,
-      `Company: ${val('company')}`,
-      `Email: ${val('email')}`,
-      `Phone: ${val('phone')||'Not provided'}`,
-      `Business type: ${val('businessType')}`,
-      `Primary market/location: ${val('location')||'Not provided'}`,
-      '',
-      `Active projects: ${val('projects')}`,
-      `Business entities: ${val('entities')||'Not provided'}`,
-      `Monthly transaction volume: ${val('transactions')||'Not sure'}`,
-      `Accounting/bookkeeping system: ${val('accountingSystem')||'Not provided'}`,
-      `Current finance support: ${val('financeSupport')||'Not provided'}`,
-      `Timing: ${val('timing')||'Not provided'}`,
-      '',
-      `Areas needing attention: ${needs.length?needs.join('; '):'Not specified'}`,
-      `Primary problem: ${val('problem')}`,
-      `Services of interest: ${interest.length?interest.join('; '):'Not specified'}`,
-      '',
-      `Indicative package fit: ${fit?fit.name:'To be determined'}`,
-      fit?`Indicative public pricing: ${fit.price}`:'',
-      '',
-      'Acknowledgements confirmed: professional-boundary notice and intake accuracy.',
-      'Note: This intake preparation does not create a client or professional relationship.'
+      'LEONEM VENTURES — FOUNDING CLIENT INTAKE','',
+      `Name: ${val('name')}`,`Company: ${val('company')}`,`Email: ${val('email')}`,`Phone: ${val('phone')||'Not provided'}`,`Business type: ${val('businessType')}`,`Primary market/location: ${val('location')||'Not provided'}`,'',
+      `Active projects: ${val('projects')}`,`Business entities: ${val('entities')||'Not provided'}`,`Monthly transaction volume: ${val('transactions')||'Not sure'}`,`Accounting/bookkeeping system: ${val('accountingSystem')||'Not provided'}`,`Current finance support: ${val('financeSupport')||'Not provided'}`,`Timing: ${val('timing')||'Not provided'}`,'',
+      `Areas needing attention: ${needs.length?needs.join('; '):'Not specified'}`,`Primary problem: ${val('problem')}`,`Services of interest: ${interest.length?interest.join('; '):'Not specified'}`,'',
+      `Indicative package fit: ${fit?fit.name:'To be determined'}`,fit?`Indicative public pricing: ${fit.price}`:'','',
+      'Acknowledgements confirmed: professional-boundary notice and intake accuracy.','Note: This intake preparation does not create a client or professional relationship.'
     ].filter(Boolean);
     intakeSummary.value=lines.join('\n');
     intakeResult.hidden=false;
