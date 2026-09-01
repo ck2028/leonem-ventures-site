@@ -1,4 +1,5 @@
 const tallyUrl='https://tally.so/r/2E6lNp';
+const businessEmail='leonemventures.chicago@gmail.com';
 
 document.querySelectorAll('a[href^="#"]').forEach(link=>{
   link.addEventListener('click',event=>{
@@ -27,6 +28,20 @@ if(contactCard){
     button.textContent='Start Secure Intake';
     button.href=tallyUrl;
   }
+  if(!contactCard.querySelector('.business-email')){
+    const emailLine=document.createElement('p');
+    emailLine.className='fine business-email';
+    emailLine.innerHTML=`Questions? <a href="mailto:${businessEmail}">${businessEmail}</a>`;
+    contactCard.appendChild(emailLine);
+  }
+}
+
+const footerBrand=document.querySelector('.footer-grid > div:first-child');
+if(footerBrand && !footerBrand.querySelector('.footer-email')){
+  const emailLine=document.createElement('span');
+  emailLine.className='footer-email';
+  emailLine.innerHTML=`<br><a href="mailto:${businessEmail}">${businessEmail}</a>`;
+  footerBrand.appendChild(emailLine);
 }
 
 const intakeForm=document.getElementById('intakeForm');
